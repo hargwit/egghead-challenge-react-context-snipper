@@ -1,0 +1,39 @@
+{
+    "React context": {
+    "prefix": "context",
+    "body": [
+      "import React, { createContext, useContext } from 'react'",
+      "import PropTypes from 'prop-types'",
+      "",
+      "const $1Context = createContext(null)",
+      "",
+      "function $1Provider({ $2, children }) {",
+      "\t$0",
+      "",
+      "\treturn (",
+      "\t\t<$1Context.Provider value={$4}>",
+      "\t\t\t{children}",
+      "\t\t</$1Context.Provider>",
+      "\t)",
+      "}",
+      "",
+      "$1Provider.propTypes = {",
+      "\t$3,",
+      "\tchildren: PropTypes.node.isRequired,",
+      "}",
+      "",
+      "const use$1 = () => {",
+      "\tconst contextValue = useContext($1Context)",
+      "",
+      "\tif (!contextValue) {",
+      "\t\tthrow new Error('use$1 must be used within a $1Provider.')",
+      "\t}",
+      "",
+      "\treturn contextValue",
+      "}",
+      "",
+      "export { $1Provider, use$1 }"
+    ],
+    "description": "React context pattern template"
+  }
+}
